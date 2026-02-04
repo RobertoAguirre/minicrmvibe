@@ -19,10 +19,10 @@ export async function initApp() {
     <div class="min-h-screen max-w-4xl mx-auto px-4 py-8">
       <header class="mb-8 flex items-center justify-between gap-4 flex-wrap">
         <div>
-          <h1 class="text-2xl font-semibold text-teal-800">Mini CRM</h1>
-          <p class="text-teal-600 text-sm mt-1">Contactos</p>
+          <h1 class="text-2xl font-semibold text-red-800">Mini CRM</h1>
+          <p class="text-red-600 text-sm mt-1">Contactos</p>
         </div>
-        <button type="button" id="open-dashboard" class="rounded-lg bg-teal-600 px-4 py-2 text-sm font-medium text-white hover:bg-teal-700 transition-colors">
+        <button type="button" id="open-dashboard" class="rounded-lg bg-red-600 px-4 py-2 text-sm font-medium text-white hover:bg-red-700 transition-colors">
           Dashboard
         </button>
       </header>
@@ -63,7 +63,7 @@ export async function initApp() {
   root.querySelector('#open-dashboard')?.addEventListener('click', openDashboard);
 
   async function load() {
-    listSection.innerHTML = '<p class="text-teal-600 text-sm">Cargando…</p>';
+    listSection.innerHTML = '<p class="text-red-600 text-sm">Cargando…</p>';
     try {
       contacts = await api.contacts.list();
       listSection.innerHTML = contacts.length ? renderList(contacts, onEdit, onDelete) : renderEmpty();

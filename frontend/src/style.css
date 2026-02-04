@@ -1,5 +1,5 @@
 @import 'tailwindcss';
 
 body {
-  @apply bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50 text-teal-900 antialiased min-h-screen;
+  @apply bg-gradient-to-br from-red-50 via-red-50/90 to-red-100 text-red-900 antialiased min-h-screen;
 }
